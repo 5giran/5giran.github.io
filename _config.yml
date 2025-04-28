@@ -1,0 +1,9 @@
+title: "5giran's Blog"
+description: ""
+author: 5giran
+email: ohgiran@gmail.com
+url: "https://5giran.github.io/"
+baseurl: "" # 프로젝트 서브폴더명. 없다면 공백 유지
+lang: ko # 한글 사용
+
+theme: minima
