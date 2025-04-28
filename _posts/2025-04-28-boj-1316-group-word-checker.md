@@ -1,7 +1,7 @@
 ---
-title: "BOJ 1316 그룹 단어 체커 문제 풀이"
+title: "백준 1316 | 그룹 단어 체커"
 date: 2025-04-28
-categories: ["Algorithm", "BOJ"]
+categories: ["Algorithm", "백준"]
 tags: ["문자열", "구현"]
 ---
 
