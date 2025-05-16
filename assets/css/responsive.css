@@ -1,0 +1,29 @@
+/* 컨테이너 반응형 설정 */
+.site {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 미디어/이미지/표/코드 블록이 넘치지 않도록 */
+.site img,
+.site iframe,
+.site table,
+.site pre {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 코드블록에 가로 스크롤 추가 */
+.site pre {
+  overflow-x: auto;
+}
+
+/* 모바일(≤600px)일 때 패딩 축소 */
+@media (max-width: 600px) {
+  .site {
+    padding: 10px;
+  }
+}
