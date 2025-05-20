@@ -7,7 +7,7 @@ tags: ["그래프 탐색", "격자 그래프", "깊이 우선 탐색", "DFS"]
 
 # 📝 문제 설명
 
-<img src="assets/images/250520_numbering.jpg" alt="단지번호붙이기 예시 좌표" width="350">
+<img src="/assets/images/250520_numbering.jpg" alt="단지번호붙이기 예시 좌표" width="350">
 
 - 위 그림과 같은 정가각형 모양의 지도를 만든다. (가로 N, 세로 N)
 - 집이 있는 곳은 1, 없는 곳은 0으로 입력 받는다.
