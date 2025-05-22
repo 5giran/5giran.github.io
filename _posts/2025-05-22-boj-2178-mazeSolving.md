@@ -122,7 +122,8 @@ static void bfs(int row, int col) {
     queue.offer(new int[]{row, col});
 ```
 - BFS (`row`, `col`) 위치에서 시작한다.
-- 방문 처리 후, 해당 위치를 큐에 넣는다.
+- 방문 처리 후, 해당 위치를 큐에 넣는다.  
+
 ```java
 while (!queue.isEmpty()) {
     int[] current = queue.poll();
@@ -134,7 +135,8 @@ while (!queue.isEmpty()) {
   - **현재 위치란?**
     - 현재 탐색 중인 미로 안의 좌표 (`curRow`, `curCol`)
     - 이 좌표를 기준으로 상하좌우를 탐색한다.
-- FIFO(선입 선출) 구조이기 떄문에 가장 먼저 도달한 위치부터 처리된다.
+- FIFO(선입 선출) 구조이기 떄문에 가장 먼저 도달한 위치부터 처리된다.  
+
 ```java
 for (int[] dir : directions) {
     int nextRow = curRow + dir[0];
@@ -144,11 +146,13 @@ for (int[] dir : directions) {
   - 이 좌표는 물리적인 위치 (`row`, `col`)을 의미하고,  
   - 그 칸에 저장된 값이 출발점으로부터 몇 레벨 떨어져 있는지 나타낸다.
 - 큐에서 꺼낸 (`curRow`, `curCol`)는 지금 우리가 서 있는 미로 상의 좌표(칸)
-- 이 좌표를 기준으로 다음으로 방문할 수 있는 칸을 판단해 큐에 넣는다.
+- 이 좌표를 기준으로 다음으로 방문할 수 있는 칸을 판단해 큐에 넣는다.  
+
 ```java
 if (nextRow < 0 || nextRow >= N || nextCol < 0 || nextCol >= M) continue;
 ```
-- 그리드-미로 범위를 벗어난 위치는 탐색에서 건너뛴다. (`continue`)
+- 그리드-미로 범위를 벗어난 위치는 탐색에서 건너뛴다. (`continue`)  
+
 ```java
 if (grid[nextRow][nextCol] == 1 && !visited[nextRow][nextCol]) {
     visited[nextRow][nextCol] = true;
@@ -159,7 +163,7 @@ if (grid[nextRow][nextCol] == 1 && !visited[nextRow][nextCol]) {
 - 이동 가능한 칸이라면? (1이면서 방문하지 않은 칸)
   - 방문 표시
   - 이동 거리 = 현재 위치 값 + 1로 업데이트 한다.
-  - 큐에 다음 탐색 대상을 추가한다.
+  - 큐에 다음 탐색 대상을 추가한다.  
 
 ---
 
