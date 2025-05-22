@@ -1,6 +1,6 @@
 ---
 title: "백준 2178 | 미로 탐색"
-date: 2025-05-21
+date: 2025-05-22
 categories: ["Algorithm", "백준"]
 tags: ["그래프 탐색", "너비 우선 탐색", "BFS", "격자 그래프"]
 ---
@@ -121,7 +121,7 @@ static void bfs(int row, int col) {
     visited[row][col] = true;
     queue.offer(new int[]{row, col});
 ```
-- BFS (row, col) 위치에서 시작한다.
+- BFS (`row`, `col`) 위치에서 시작한다.
 - 방문 처리 후, 해당 위치를 큐에 넣는다.
 ```java
 while (!queue.isEmpty()) {
@@ -130,9 +130,43 @@ while (!queue.isEmpty()) {
     int curCol = current[1];
 ```
 - 큐에서 하나씩 꺼내서 현재 위치로 설정한다.
+  - **BFS의 핵심동작**
+  - **현재 위치란?**
+    - 현재 탐색 중인 미로 안의 좌표 (`curRow`, `curCol`)
+    - 이 좌표를 기준으로 상하좌우를 탐색한다.
+- FIFO(선입 선출) 구조이기 떄문에 가장 먼저 도달한 위치부터 처리된다.
+```java
+for (int[] dir : directions) {
+    int nextRow = curRow + dir[0];
+    int nextCol = curCol + dir[1];
+```
+- 상하좌우 방향으로 이동할 수 있도록 다음 좌표를 계산한다.
+  - 이 좌표는 물리적인 위치 (`row`, `col`)을 의미하고,  
+  - 그 칸에 저장된 값이 출발점으로부터 몇 레벨 떨어져 있는지 나타낸다.
+- 큐에서 꺼낸 (`curRow`, `curCol`)는 지금 우리가 서 있는 미로 상의 좌표(칸)
+- 이 좌표를 기준으로 다음으로 방문할 수 있는 칸을 판단해 큐에 넣는다.
+```java
+if (nextRow < 0 || nextRow >= N || nextCol < 0 || nextCol >= M) continue;
+```
+- 그리드-미로 범위를 벗어난 위치는 탐색에서 건너뛴다. (`continue`)
+```java
+if (grid[nextRow][nextCol] == 1 && !visited[nextRow][nextCol]) {
+    visited[nextRow][nextCol] = true;
+    grid[nextRow][nextCol] = grid[curRow][curCol] + 1;
+    queue.offer(new int[]{nextRow, nextCol});
+}
+```
+- 이동 가능한 칸이라면? (1이면서 방문하지 않은 칸)
+  - 방문 표시
+  - 이동 거리 = 현재 위치 값 + 1로 업데이트 한다.
+  - 큐에 다음 탐색 대상을 추가한다.
 
 ---
 
 # ✏️ 느낀 점
 
-- 필터링 로직 없이도 탐색으로 필터링 되는 구조구나
+- BFS(DFS)에서 다음 좌표를 저장할 변수명은 앞으로 `nextRow`나 `nxtRow`로 통일 해야겠다.
+  - `new` 보다 `next` 쪽이 읽기에 직관적인 것 같다.
+- br.nextToken()로 쓰지 않게 유의할것. 습관적으로 br을 쓴다. `st.nextToken()`
+- 로직을 메인함수 외부에 선언하는 BFS(DFS) 같은 문제는 잊지말고 입력값 `N`을 외부에 전역변수로 선언하자.
+
