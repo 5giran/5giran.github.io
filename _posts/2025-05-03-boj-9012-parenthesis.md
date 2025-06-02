@@ -1,7 +1,7 @@
 ---
 title: "백준 9012 | 괄호"
 date: 2025-05-03
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["스택", "문자열"]
 ---
 
