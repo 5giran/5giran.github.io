@@ -1,7 +1,7 @@
 ---
 title: "백준 4963 | 섬의 개수"
 date: 2025-05-21
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["그래프 탐색", "격자 그래프", "깊이 우선 탐색", "DFS", "격자 그래프", "플러드 필"]
 ---
 
