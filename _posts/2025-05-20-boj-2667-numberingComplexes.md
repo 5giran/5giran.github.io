@@ -1,7 +1,7 @@
 ---
 title: "백준 2667 | 단지번호붙이기"
 date: 2025-05-20
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["그래프 탐색", "격자 그래프", "깊이 우선 탐색", "DFS"]
 ---
 
