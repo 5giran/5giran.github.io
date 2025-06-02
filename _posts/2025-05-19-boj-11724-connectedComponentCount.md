@@ -1,7 +1,7 @@
 ---
 title: "백준 11724 | 연결 요소의 개수"
 date: 2025-05-19
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["그래프 탐색", "깊이 우선 탐색", "DFS"]
 ---
 
