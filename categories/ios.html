@@ -1,0 +1,45 @@
+---
+layout: default
+title: iOS
+permalink: /categories/ios/
+---
+
+<div class="category-page">
+  <div class="category-header">
+    <div class="category-icon-large">📱</div>
+    <h1>iOS</h1>
+    <p>iOS 개발 및 Swift 학습</p>
+  </div>
+
+  <div class="posts-container">
+    {% assign ios_posts = site.posts | where_exp: "post", "post.categories contains 'iOS'" %}
+    
+    {% if ios_posts.size > 0 %}
+      <div class="posts-grid">
+        {% for post in ios_posts %}
+          <article class="post-card">
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y년 %m월 %d일" }}
+              </time>
+              <span class="post-category">
+                <span class="category-tag category-ios">iOS</span>
+              </span>
+            </div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            {% if post.excerpt %}
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-posts-category">
+        <div class="no-posts-icon">🔍</div>
+        <h3>아직 포스트가 없습니다</h3>
+        <p>첫 번째 포스트를 작성해보세요!</p>
+        <a href="{{ '/' | relative_url }}" class="btn-primary">홈으로 돌아가기</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
