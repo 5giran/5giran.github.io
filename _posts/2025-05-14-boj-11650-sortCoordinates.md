@@ -1,7 +1,7 @@
 ---
 title: "백준 11650 | 좌표 정렬하기"
 date: 2025-05-14
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["정렬"]
 ---
 

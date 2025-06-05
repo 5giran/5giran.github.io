@@ -1,7 +1,7 @@
 ---
 title: "백준 2751 | 수 정렬하기 2"
 date: 2025-05-14
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["정렬"]
 ---
 

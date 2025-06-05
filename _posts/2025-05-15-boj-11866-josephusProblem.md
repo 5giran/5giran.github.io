@@ -1,7 +1,7 @@
 ---
 title: "백준 11866 | 요세푸스 문제 0"
 date: 2025-05-15
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["자료구조", "큐"]
 ---
 

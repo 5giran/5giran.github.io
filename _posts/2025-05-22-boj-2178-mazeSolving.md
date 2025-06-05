@@ -1,7 +1,7 @@
 ---
 title: "백준 2178 | 미로 탐색"
 date: 2025-05-22
-categories: ["Algorithm", "백준"]
+categories: ["Algorithm"]
 tags: ["그래프 탐색", "너비 우선 탐색", "BFS", "격자 그래프"]
 ---
 
