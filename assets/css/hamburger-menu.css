@@ -418,6 +418,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Post Card Styles - Ensuring consistent height */
 .post-card {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
@@ -425,6 +426,9 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
 .post-card:hover {
@@ -459,39 +463,87 @@ body {
   color: #F7931E;
 }
 
-/* Post Tag Badges - Updated with lighter colors */
+/* Post Card Title */
+.post-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.post-card h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-card h3 a:hover {
+  color: #FF6B35;
+}
+
+/* Post Tag Badges - Orange-Gray Mix */
 .post-tags {
-  margin-top: 0.75rem;
+  margin-top: auto;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tag-badge {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 12px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  background: rgba(255, 107, 53, 0.1);
-  color: #FF6B35;
-  border: 1px solid rgba(255, 107, 53, 0.2);
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  /* Orange-gray mix: gray base with orange tint */
+  background: rgba(150, 150, 150, 0.1);
+  color: #8B6B58; /* Brownish color mixing orange and gray */
+  border: 1px solid rgba(150, 100, 80, 0.2);
   transition: all 0.2s ease;
-  text-transform: none; /* 한극어 태그를 위해 대문자 변환 제거 */
-  letter-spacing: normal; /* 한국어 읽기 최적화를 위한 자간 초기화 */
 }
 
 .tag-badge:hover {
-  background: rgba(255, 107, 53, 0.15);
-  border-color: rgba(255, 107, 53, 0.3);
+  background: rgba(150, 100, 80, 0.15);
+  border-color: rgba(150, 100, 80, 0.3);
   transform: translateY(-1px);
 }
 
-/* Remove the old gradient tag styles */
-.tag-algorithm,
-.tag-ios {
-  display: none;
+.tag-placeholder {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
 }
 
+/* Post Excerpt */
+.post-excerpt {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.category-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
 
 .category-item a {
   display: block;
@@ -721,6 +773,31 @@ body {
 .no-posts-archive p {
   color: #666;
   margin-bottom: 2rem;
+}
+
+/* Back to Home Button */
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 107, 53, 0.1);
+  color: #FF6B35;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 2px solid #FF6B35;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #FF6B35;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.back-to-home {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 /* Responsive for posts archive */
