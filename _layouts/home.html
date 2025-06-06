@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="home-content">
   <section class="recent-posts">
     <h2>최근 게시물</h2>
@@ -23,16 +22,19 @@ layout: default
               {% endif %}
             </div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-            {% if post.categories.size > 0 %}
+            {% if post.tags and post.tags.size > 0 %}
               <div class="post-tags">
-                {% for category in post.categories %}
-                  <span class="tag-badge tag-{{ category | downcase }}">{{ category }}</span>
+                {% for tag in post.tags limit:3 %}
+                  <span class="tag-badge">#{{ tag | truncate: 8, "..." }}</span>
                 {% endfor %}
+                {% if post.tags.size > 3 %}
+                  <span class="tag-badge">+{{ post.tags.size | minus: 3 }}</span>
+                {% endif %}
               </div>
             {% else %}
-              {% if post.excerpt %}
-                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-              {% endif %}
+              <div class="post-tags">
+                <span class="tag-placeholder">&nbsp;</span>
+              </div>
             {% endif %}
           </article>
         {% endfor %}
@@ -45,7 +47,7 @@ layout: default
       <p class="no-posts">아직 게시물이 없습니다. 첫 번째 게시물을 작성해보세요! 🚀</p>
     {% endif %}
   </section>
-
+  
   <section class="categories-section">
     <h2>카테고리</h2>
     <div class="categories-grid">
