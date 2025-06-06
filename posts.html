@@ -1,14 +1,19 @@
 ---
 layout: default
+title: 모든 게시물
+permalink: /posts/
 ---
 
-<div class="home-content">
-  <section class="recent-posts">
-    <h2>최근 게시물</h2>
-    
+<div class="posts-archive">
+  <div class="archive-header">
+    <h1>모든 게시물</h1>
+    <p>{{ site.posts.size }}개의 게시물이 있습니다</p>
+  </div>
+
+  <div class="posts-container">
     {% if site.posts.size > 0 %}
       <div class="posts-grid">
-        {% for post in site.posts limit:6 %}
+        {% for post in site.posts %}
           <article class="post-card">
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_xmlschema }}">
@@ -29,30 +34,17 @@ layout: default
           </article>
         {% endfor %}
       </div>
-      
-      <div class="view-all-posts">
-        <a href="{{ '/posts' | relative_url }}" class="btn-primary">모든 게시물 보기</a>
-      </div>
     {% else %}
-      <p class="no-posts">아직 게시물이 없습니다. 첫 번째 게시물을 작성해보세요! 🚀</p>
+      <div class="no-posts-archive">
+        <div class="no-posts-icon">📝</div>
+        <h3>아직 게시물이 없습니다</h3>
+        <p>첫 번째 게시물을 작성해보세요!</p>
+        <a href="{{ site.baseurl }}/" class="btn-primary">홈으로 돌아가기</a>
+      </div>
     {% endif %}
-  </section>
+  </div>
 
-  <section class="categories-section">
-    <h2>카테고리</h2>
-    <div class="categories-grid">
-      <div class="category-item">
-        <a href="{{ '/categories/algorithm/' | relative_url }}">
-          <div class="category-icon">🧮</div>
-          <h3>Algorithm</h3>
-        </a>
-      </div>
-      <div class="category-item">
-        <a href="{{ '/categories/ios/' | relative_url }}">
-          <div class="category-icon">📱</div>
-          <h3>iOS</h3>
-        </a>
-      </div>
-    </div>
-  </section>
+  <div class="back-to-home">
+    <a href="{{ site.baseurl }}/" class="btn-secondary">홈으로 돌아가기</a>
+  </div>
 </div>
