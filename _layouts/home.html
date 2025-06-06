@@ -23,8 +23,16 @@ layout: default
               {% endif %}
             </div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-            {% if post.excerpt %}
-              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            {% if post.categories.size > 0 %}
+              <div class="post-tags">
+                {% for category in post.categories %}
+                  <span class="tag-badge tag-{{ category | downcase }}">{{ category }}</span>
+                {% endfor %}
+              </div>
+            {% else %}
+              {% if post.excerpt %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              {% endif %}
             {% endif %}
           </article>
         {% endfor %}
