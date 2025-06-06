@@ -1,0 +1,50 @@
+---
+layout: default
+title: 모든 게시물
+permalink: /posts/
+---
+
+<div class="posts-archive">
+  <div class="archive-header">
+    <h1>모든 게시물</h1>
+    <p>{{ site.posts.size }}개의 게시물이 있습니다</p>
+  </div>
+
+  <div class="posts-container">
+    {% if site.posts.size > 0 %}
+      <div class="posts-grid">
+        {% for post in site.posts %}
+          <article class="post-card">
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y년 %m월 %d일" }}
+              </time>
+              {% if post.categories.size > 0 %}
+                <span class="post-category">
+                  {% for category in post.categories %}
+                    <span class="category-tag category-{{ category | downcase }}">{{ category }}</span>
+                  {% endfor %}
+                </span>
+              {% endif %}
+            </div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            {% if post.excerpt %}
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="no-posts-archive">
+        <div class="no-posts-icon">📝</div>
+        <h3>아직 게시물이 없습니다</h3>
+        <p>첫 번째 게시물을 작성해보세요!</p>
+        <a href="{{ site.baseurl }}/" class="btn-primary">홈으로 돌아가기</a>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="back-to-home">
+    <a href="{{ site.baseurl }}/" class="btn-secondary">홈으로 돌아가기</a>
+  </div>
+</div>
