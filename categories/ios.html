@@ -3,13 +3,11 @@ layout: default
 title: iOS
 permalink: /categories/ios/
 ---
-
 <div class="category-page">
   <div class="category-header">
     <div class="category-icon-large">📱</div>
     <h1>iOS</h1>
   </div>
-
   <div class="posts-container">
     {% assign ios_posts = site.posts | where_exp: "post", "post.categories contains 'iOS'" %}
     
@@ -26,17 +24,20 @@ permalink: /categories/ios/
               </span>
             </div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-            <div class="post-tags">
-              <span class="tag-badge tag-ios">IOS</span>
-            </div>
+            {% if post.tags and post.tags.size > 0 %}
+              <div class="post-tags">
+                {% for tag in post.tags %}
+                  <span class="tag-badge">#{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
           </article>
         {% endfor %}
       </div>
     {% else %}
       <div class="no-posts-category">
         <div class="no-posts-icon">🔍</div>
-        <h3>아직 iOS 포스트가 없습니다</h3>
-        <p>첫 번째 iOS 포스트를 작성해보세요!</p>
+        <h3>아직 포스트가 없습니다</h3>
         <a href="{{ site.baseurl }}/" class="btn-primary">홈으로 돌아가기</a>
       </div>
     {% endif %}
