@@ -678,3 +678,97 @@ body {
     font-size: 3rem;
   }
 }
+
+
+/* ==========================================================================
+   Posts Archive Page Styles
+   ========================================================================== */
+
+.posts-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+}
+
+.archive-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.archive-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FF6B35;
+  margin-bottom: 0.5rem;
+}
+
+.archive-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.posts-container {
+  margin-bottom: 3rem;
+}
+
+.no-posts-archive {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.no-posts-archive .no-posts-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.no-posts-archive h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.no-posts-archive p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.back-to-home {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: #FF6B35;
+  text-decoration: none;
+  border: 2px solid #FF6B35;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #FF6B35;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* Responsive for posts archive */
+@media (max-width: 768px) {
+  .posts-archive {
+    padding: 2rem 1rem;
+  }
+  
+  .archive-header h1 {
+    font-size: 2rem;
+  }
+}
