@@ -459,80 +459,39 @@ body {
   color: #F7931E;
 }
 
-/* Post Tag Badges */
+/* Post Tag Badges - Updated with lighter colors */
 .post-tags {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .tag-badge {
   display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.tag-algorithm {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
-  color: white;
-  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
-}
-
-.tag-ios {
-  background: linear-gradient(135deg, #F7931E 0%, #FFB84D 100%);
-  color: white;
-  box-shadow: 0 2px 8px rgba(247, 147, 30, 0.3);
+  background: rgba(255, 107, 53, 0.1);
+  color: #FF6B35;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  transition: all 0.2s ease;
+  text-transform: none; /* 한극어 태그를 위해 대문자 변환 제거 */
+  letter-spacing: normal; /* 한국어 읽기 최적화를 위한 자간 초기화 */
 }
 
 .tag-badge:hover {
+  background: rgba(255, 107, 53, 0.15);
+  border-color: rgba(255, 107, 53, 0.3);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
 }
 
-.post-card h3 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
+/* Remove the old gradient tag styles */
+.tag-algorithm,
+.tag-ios {
+  display: none;
 }
 
-.post-card h3 a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.post-card h3 a:hover {
-  color: #FF6B35;
-}
-
-.post-excerpt {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.category-item {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.category-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
 
 .category-item a {
   display: block;
