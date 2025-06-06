@@ -8,7 +8,6 @@ permalink: /categories/algorithm/
   <div class="category-header">
     <div class="category-icon-large">🧮</div>
     <h1>Algorithm</h1>
-    <p>문제 해결과 알고리즘 학습</p>
   </div>
 
   <div class="posts-container">
@@ -27,17 +26,17 @@ permalink: /categories/algorithm/
               </span>
             </div>
             <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-            {% if post.excerpt %}
-              <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-            {% endif %}
+            <div class="post-tags">
+              <span class="tag-badge tag-algorithm">ALGORITHM</span>
+            </div>
           </article>
         {% endfor %}
       </div>
     {% else %}
       <div class="no-posts-category">
         <div class="no-posts-icon">🔍</div>
-        <h3>아직 포스트가 없습니다</h3>
-        <p>첫 번째 포스트를 작성해보세요!</p>
+        <h3>아직 Algorithm 포스트가 없습니다</h3>
+        <p>첫 번째 Algorithm 포스트를 작성해보세요!</p>
         <a href="{{ site.baseurl }}/" class="btn-primary">홈으로 돌아가기</a>
       </div>
     {% endif %}
