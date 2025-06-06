@@ -17,7 +17,7 @@ layout: default
               {% if post.categories.size > 0 %}
                 <span class="post-category">
                   {% for category in post.categories %}
-                    <span class="category-tag category-{{ category }}">{{ category }}</span>
+                    <span class="category-tag category-{{ category | downcase }}">{{ category }}</span>
                   {% endfor %}
                 </span>
               {% endif %}
@@ -42,20 +42,17 @@ layout: default
     <h2>카테고리</h2>
     <div class="categories-grid">
       <div class="category-item">
-        <a href="{{ '/categories/algorithm' | relative_url }}">
+        <a href="{{ '/categories/algorithm/' | relative_url }}">
           <div class="category-icon">🧮</div>
           <h3>Algorithm</h3>
-          <p>문제 해결과 알고리즘 학습</p>
         </a>
       </div>
       <div class="category-item">
-        <a href="{{ '/categories/ios' | relative_url }}">
+        <a href="{{ '/categories/ios/' | relative_url }}">
           <div class="category-icon">📱</div>
           <h3>iOS</h3>
-          <p>iOS 개발 및 Swift 학습</p>
         </a>
       </div>
     </div>
   </section>
 </div>
-
