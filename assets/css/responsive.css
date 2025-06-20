@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Responsive Design - Mobile & Tablet Breakpoints
+   ========================================================================== */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Header Responsive */
+  .header-container {
+    padding: 1rem;
+  }
+  
+  /* Side Navigation Mobile */
+  .side-nav {
+    width: 100%;
+    right: -100%;
+  }
+  
+  /* Content Responsive */
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 1rem;
+  }
+  
+  .content-wrapper {
+    padding: 2rem 1rem;
+  }
+  
+  .wide-content-wrapper {
+    padding: 2rem 1rem;
+  }
+  
+  /* Grid Responsive */
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Layout Adjustments */
+  .site-content {
+    margin-top: 70px;
+  }
+  
+  /* Typography Responsive */
+  .section-title,
+  .recent-posts h2,
+  .categories-section h2 {
+    font-size: 1.75rem;
+  }
+  
+  .category-header h1 {
+    font-size: 2rem;
+  }
+  
+  .category-icon-large {
+    font-size: 3rem;
+  }
+  
+  .archive-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  /* Navigation Responsive */
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .nav-next {
+    text-align: left;
+  }
+  
+  /* Category Items Mobile */
+  .category-item a {
+    padding: 2rem 1.5rem;
+  }
+  
+  .category-icon {
+    font-size: 3rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .header-container {
+    padding: 0.75rem 1rem;
+  }
+  
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 1rem 0.5rem;
+  }
+  
+  .content-wrapper,
+  .wide-content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+  
+  .posts-grid {
+    gap: 0.75rem;
+  }
+  
+  .post-card {
+    padding: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .category-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
