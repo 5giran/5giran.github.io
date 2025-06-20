@@ -9,18 +9,30 @@
   padding: 0 2rem;
 }
 
-/* Grid Layouts - Universal for all pages */
-.posts-grid {
+/* Grid Layouts - Universal for all pages with higher specificity */
+.posts-grid,
+.home-content .posts-grid,
+.category-page .posts-grid,
+.posts-archive .posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
+  width: 100%; /* Ensure full width within container */
 }
 
-.categories-grid {
+.categories-grid,
+.home-content .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+/* Ensure posts container doesn't interfere */
+.posts-container {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 /* Section Spacing */
