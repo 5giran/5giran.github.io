@@ -17,6 +17,7 @@
 .category-icon-large {
   font-size: 4rem;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .category-header h1 {
@@ -35,6 +36,14 @@
 
 .posts-container {
   margin-top: 2rem;
+}
+
+/* Make sure posts grid follows the same pattern as home page */
+.category-page .posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* No posts state for category pages */
