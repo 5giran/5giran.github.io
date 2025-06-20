@@ -2,72 +2,192 @@
    Category Page Styles
    ========================================================================== */
 
-.category-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 2rem 2rem;
-}
-
-.category-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-}
-
-.category-icon-large {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.category-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-orange);
-  margin-bottom: 0.5rem;
-}
-
-.category-header p {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.posts-container {
-  margin-top: 2rem;
-}
-
-/* Make sure posts grid follows the same pattern as home page */
-.category-page .posts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-/* No posts state for category pages */
-.no-posts-category {
-  text-align: center;
-  padding: 4rem 2rem;
+/* Post Card Styles - Ensuring consistent height */
+.post-card {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 16px;
+  border-radius: 12px;
+  padding: 1.5rem;
   box-shadow: 0 4px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-light);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
-.no-posts-icon {
-  font-size: 3rem;
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
-  opacity: 0.6;
-}
-
-.no-posts-category h3 {
-  font-size: 1.5rem;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
-}
-
-.no-posts-category p {
+  font-size: 0.85rem;
   color: var(--text-light);
-  margin-bottom: 2rem;
+}
+
+.category-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.category-algorithm {
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--primary-orange);
+}
+
+.category-ios {
+  background: rgba(247, 147, 30, 0.1);
+  color: var(--secondary-orange);
+}
+
+/* Post Card Title */
+.post-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.post-card h3 a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.post-card h3 a:hover {
+  color: var(--primary-orange);
+}
+
+/* Post Tag Badges - Orange-Gray Mix */
+.post-tags {
+  margin-top: auto;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+  /* Orange-gray mix: gray base with orange tint */
+  background: rgba(150, 150, 150, 0.1);
+  color: #8B6B58; /* Brownish color mixing orange and gray */
+  border: 1px solid rgba(150, 100, 80, 0.2);
+  transition: all 0.2s ease;
+}
+
+.tag-badge:hover {
+  background: rgba(150, 100, 80, 0.15);
+  border-color: rgba(150, 100, 80, 0.3);
+  transform: translateY(-1px);
+}
+
+.tag-placeholder {
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+}
+
+/* Post Excerpt */
+.post-excerpt {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--primary-orange);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 2px solid var(--primary-orange);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-orange);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* No Posts States */
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
 }
