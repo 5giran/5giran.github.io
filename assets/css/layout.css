@@ -9,16 +9,27 @@
   padding: 0 2rem;
 }
 
+/* Force consistent container behavior at all screen sizes */
+.category-page,
+.posts-archive {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 3rem 2rem 2rem !important;
+  box-sizing: border-box !important;
+}
+
 /* Grid Layouts - Universal for all pages with higher specificity */
 .posts-grid,
 .home-content .posts-grid,
 .category-page .posts-grid,
 .posts-archive .posts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-  width: 100%; /* Ensure full width within container */
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 2rem !important;
+  margin-bottom: 2rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .categories-grid,
@@ -30,9 +41,10 @@
 
 /* Ensure posts container doesn't interfere */
 .posts-container {
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 2rem 0 4rem 0 !important;
+  padding: 0 !important;
 }
 
 /* Section Spacing */
@@ -134,4 +146,52 @@
 
 .nav-links a:hover {
   color: var(--primary-orange);
+}
+
+/* Responsive breakpoints */
+@media (min-width: 1400px) {
+  /* Large screens - maintain same container width */
+  .category-page,
+  .posts-archive {
+    max-width: 1200px !important;
+    padding: 3rem 2rem 2rem !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* Standard desktop - same container */
+  .category-page,
+  .posts-archive {
+    max-width: 1200px !important;
+    padding: 3rem 2rem 2rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Tablet/small desktop - reduce container slightly */
+  .category-page,
+  .posts-archive {
+    max-width: 100% !important;
+    padding: 3rem 2rem 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile - single column */
+  .category-page,
+  .posts-archive {
+    padding: 2rem 1rem !important;
+  }
+  
+  .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
