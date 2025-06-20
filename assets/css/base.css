@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Base Styles - fonts, variables, reset styles
+   Base Styles - Foundation & Typography
    ========================================================================== */
 
 /* Custom Font Import */
@@ -53,4 +53,10 @@ a {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Main Content Adjustment */
+.site-content {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
 }
