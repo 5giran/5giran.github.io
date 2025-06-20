@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Homepage Specific Styles - 홈, 카테고리, 아카이브
+   ========================================================================== */
+
+/* Home Content Container */
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+}
+
+/* Recent Posts Section */
+.recent-posts {
+  margin-bottom: 4rem;
+}
+
+.recent-posts h2,
+.categories-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Category Items for Homepage */
+.category-item {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.category-item a {
+  display: block;
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.category-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-item h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
