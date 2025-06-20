@@ -6,7 +6,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
 /* Page Containers - Centered like post.css */
@@ -15,7 +15,7 @@
 .posts-archive {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 3rem 2rem;
 }
 
 /* Grid Layouts - 3 columns on desktop, responsive */
@@ -99,13 +99,13 @@
 .content-wrapper {
   max-width: 800px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem 3rem;
 }
 
 .wide-content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem 2rem;
+  padding: 3rem 3rem 2rem;
 }
 
 /* Navigation Helpers */
@@ -162,7 +162,7 @@
   .home-content,
   .category-page,
   .posts-archive {
-    padding: 3rem 2rem 2rem; /* Consistent padding */
+    padding: 3rem 3rem 2rem; /* Consistent padding */
   }
 }
 
@@ -179,7 +179,7 @@
   .home-content,
   .category-page,
   .posts-archive {
-    padding: 3rem 2rem 2rem; /* Same padding as desktop */
+    padding: 3rem 3rem 2rem; /* Same padding as desktop */
   }
 }
 
@@ -203,7 +203,7 @@
   .home-content,
   .category-page,
   .posts-archive {
-    padding: 3rem 2rem 2rem; /* UNIFIED: Same padding as desktop/tablet */
+    padding: 3rem 3rem 2rem; /* UNIFIED: Same padding as desktop/tablet */
   }
   
   .container {
