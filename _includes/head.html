@@ -2,24 +2,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
 
-<!-- 햄버거 메뉴 CSS -->
-<link rel="stylesheet" href="{{ '/assets/css/hamburger-menu.css' | relative_url }}">
+<!-- Core CSS - Always load these -->
+<link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
 
-<!-- Post-specific CSS -->
+<!-- Page-specific CSS -->
 {% if page.layout == 'post' %}
-<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+{% elsif page.layout == 'category' %}
+  <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
+{% elsif page.layout == 'archive' %}
+  <link rel="stylesheet" href="{{ '/assets/css/archive.css' | relative_url }}">
+{% else %}
+  <!-- Default to home page styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 {% endif %}
+
+<!-- Responsive CSS - Always load last -->
+<link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- RSS Feed -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-
