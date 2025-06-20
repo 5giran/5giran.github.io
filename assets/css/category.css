@@ -12,34 +12,34 @@
 /* Category Header Section */
 .category-header {
   text-align: center;
-  margin-bottom: 4rem;
-  padding: 4rem 0;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
   background: transparent;
 }
 
 .category-icon-large {
-  font-size: 8rem;
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
   display: block;
   text-align: center;
   line-height: 1;
 }
 
 .category-header h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .category-header p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--text-light);
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .posts-container {
