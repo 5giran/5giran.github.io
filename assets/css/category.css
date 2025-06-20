@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Category Page Styles
+   ========================================================================== */
+
+.category-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.category-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+  margin-bottom: 0.5rem;
+}
+
+.category-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.posts-container {
+  margin-top: 2rem;
+}
