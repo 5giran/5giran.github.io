@@ -9,30 +9,41 @@
   padding: 0 2rem;
 }
 
-/* Grid Layouts - RESTORED TO ORIGINAL WORKING VERSION */
+/* Page Containers - Centered like post.css */
+.home-content,
+.category-page,
+.posts-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+}
+
+/* Grid Layouts - 3 columns on desktop, responsive */
 .posts-grid,
 .home-content .posts-grid,
 .category-page .posts-grid,
 .posts-archive .posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* ORIGINAL WORKING CODE */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
   gap: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
+  margin: 0 auto 2rem auto; /* Center the grid */
+  max-width: 100%;
 }
 
+/* Categories Grid - For homepage categories */
 .categories-grid,
 .home-content .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  margin: 0 auto; /* Center the grid */
 }
 
-/* Ensure posts container doesn't interfere */
+/* Posts Container - Centered */
 .posts-container {
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin: 2rem auto 4rem auto; /* Center container */
+  max-width: 100%;
 }
 
 /* Section Spacing */
@@ -134,4 +145,68 @@
 
 .nav-links a:hover {
   color: var(--primary-orange);
+}
+
+/* Responsive Breakpoints - UNIFIED SPACING */
+
+/* Large Desktop - 3 columns */
+@media (min-width: 1200px) {
+  .posts-grid,
+  .home-content .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* Consistent gap */
+  }
+  
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 3rem 2rem 2rem; /* Consistent padding */
+  }
+}
+
+/* Medium Desktop/Tablet - 2 columns */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .posts-grid,
+  .home-content .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* Same gap as desktop */
+  }
+  
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 3rem 2rem 2rem; /* Same padding as desktop */
+  }
+}
+
+/* Mobile - 1 column with unified spacing */
+@media (max-width: 768px) {
+  .posts-grid,
+  .home-content .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 2rem; /* UNIFIED: Same gap as desktop/tablet */
+    margin: 0 auto 2rem auto;
+  }
+  
+  .categories-grid,
+  .home-content .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem; /* UNIFIED: Same gap as desktop/tablet */
+  }
+  
+  .home-content,
+  .category-page,
+  .posts-archive {
+    padding: 3rem 2rem 2rem; /* UNIFIED: Same padding as desktop/tablet */
+  }
+  
+  .container {
+    padding: 0 2rem; /* UNIFIED: Same side padding */
+  }
 }
