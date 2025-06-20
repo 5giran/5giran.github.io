@@ -44,7 +44,9 @@
   }
   
   /* Grid Responsive */
-  .posts-grid {
+  .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -96,6 +98,11 @@
   .category-icon {
     font-size: 3rem;
   }
+  
+  /* Category Page Responsive */
+  .category-page {
+    padding: 2rem 1rem;
+  }
 }
 
 /* Small Mobile Styles */
@@ -119,7 +126,9 @@
     padding: 1.5rem 1rem;
   }
   
-  .posts-grid {
+  .posts-grid,
+  .category-page .posts-grid,
+  .posts-archive .posts-grid {
     gap: 0.75rem;
   }
   
