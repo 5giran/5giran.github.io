@@ -75,14 +75,14 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Side Navigation - IMPROVED LIGHTER ORANGE WITH BETTER CONTRAST */
+/* Side Navigation */
 .side-nav {
   position: fixed;
   top: 0;
   right: -400px;
   width: 350px;
   height: 100vh;
-  background: linear-gradient(135deg, #FF8C42 0%, #FFAB73 100%); /* More noticeable gradient with better contrast */
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
   color: var(--white);
   transition: right 0.3s ease;
   z-index: 1001;
@@ -104,7 +104,7 @@
 .profile-section {
   text-align: center;
   padding: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Slightly more visible border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .profile-image {
@@ -119,7 +119,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.4); /* Slightly more visible border */
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile-placeholder {
@@ -128,11 +128,11 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.25); /* Slightly more visible background */
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   font-size: 2rem;
   font-weight: bold;
-  border: 3px solid rgba(255, 255, 255, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile-section h3 {
@@ -143,7 +143,7 @@
 
 .profile-section p {
   margin: 0 0 1rem;
-  opacity: 0.95; /* Slightly more visible */
+  opacity: 0.9;
   font-size: 0.9rem;
 }
 
@@ -157,7 +157,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.25); /* More visible background */
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   text-decoration: none;
   font-size: 1.2rem;
@@ -167,7 +167,7 @@
 }
 
 .social-links a:hover {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
 }
 
@@ -180,7 +180,7 @@
   margin: 0 0 1rem;
   font-size: 1.1rem;
   font-weight: 600;
-  opacity: 0.85; /* More visible */
+  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -206,34 +206,34 @@
 }
 
 .menu-list a:hover {
-  background: rgba(255, 255, 255, 0.25); /* More visible hover */
+  background: rgba(255, 255, 255, 0.2);
   transform: translateX(5px);
 }
 
-/* Calendar Widget - Enhanced for lighter background */
+/* Calendar Widget - Modern iOS Style */
 .status-section {
   padding: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .status-section h4 {
   margin: 0 0 1rem;
   font-size: 0.9rem;
   font-weight: 600;
-  opacity: 0.85; /* More visible */
+  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .calendar-widget {
-  background: rgba(255, 255, 255, 0.2); /* More visible background */
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
   padding: 1.25rem;
   transition: all 0.3s ease;
 }
 
 .calendar-widget:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .calendar-header {
@@ -259,7 +259,7 @@
 }
 
 .calendar-nav:hover {
-  background: rgba(255, 255, 255, 0.25); /* More visible hover */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .calendar-month {
@@ -280,7 +280,7 @@
   font-size: 0.7rem;
   font-weight: 500;
   padding: 0.5rem 0;
-  opacity: 0.7; /* More visible */
+  opacity: 0.6;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -302,7 +302,7 @@
   transition: all 0.2s ease;
   position: relative;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.95); /* More visible text */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .date:empty {
@@ -311,79 +311,24 @@
 }
 
 .date:not(:empty):hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.05);
 }
 
 .date.today {
   background: rgba(255, 255, 255, 0.9);
-  color: #FF6B35; /* Keep original orange for contrast */
+  color: var(--primary-orange);
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
 .date.has-post {
-  background: rgba(255, 220, 120, 0.4); /* Adjusted for lighter background */
+  background: rgba(255, 200, 100, 0.3);
   font-weight: 600;
-  border: 1px solid rgba(255, 220, 120, 0.6);
+  border: 1px solid rgba(255, 200, 100, 0.5);
 }
 
 .date.has-post:hover {
-  background: rgba(255, 220, 120, 0.5);
+  background: rgba(255, 200, 100, 0.4);
   transform: scale(1.05);
-}
-
-/* Close Button */
-.close-btn {
-  background: none;
-  border: none;
-  color: var(--white);
-  font-size: 2rem;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.25); /* More visible hover */
-}
-
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 999;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .header-container {
-    padding: 1rem;
-  }
-  
-  .side-nav {
-    width: 100%;
-    right: -100%;
-  }
-  
-  .site-title {
-    font-size: 1.25rem;
-  }
 }
