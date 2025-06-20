@@ -18,7 +18,7 @@
 }
 
 .category-icon-large {
-  font-size: 6rem;
+  font-size: 8rem;
   margin-bottom: 2rem;
   display: block;
   text-align: center;
@@ -26,12 +26,20 @@
 }
 
 .category-header h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
-  color: var(--primary-orange);
-  margin: 0;
+  color: var(--text-dark);
+  margin: 0 0 1rem 0;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
+}
+
+.category-header p {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.4;
 }
 
 .posts-container {
