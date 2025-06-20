@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Posts Archive Page Styles - 모든 게시물 보기
+   ========================================================================== */
+
+.posts-archive {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+}
+
+.archive-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.archive-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.archive-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.posts-container {
+  margin-bottom: 4rem;
+}
