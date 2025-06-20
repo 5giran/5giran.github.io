@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Base Styles - fonts, variables, reset styles
+   ========================================================================== */
+
+/* Custom Font Import */
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Base Body Font */
+body {
+  font-family: 'LINESeedKR-Bd', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #FFF6F0;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Custom Properties for Theme Colors */
+:root {
+  --primary-orange: #FF6B35;
+  --secondary-orange: #F7931E;
+  --text-dark: #333;
+  --text-light: #666;
+  --background-light: #FFF6F0;
+  --white: #ffffff;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+/* Basic Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
