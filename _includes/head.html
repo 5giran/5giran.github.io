@@ -14,12 +14,12 @@
 <link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
 
-<!-- Page-specific CSS -->
+<!-- Page-specific CSS - URL-based detection -->
 {% if page.layout == 'post' %}
   <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-{% elsif page.layout == 'category' %}
+{% elsif page.url contains '/categories/' %}
   <link rel="stylesheet" href="{{ '/assets/css/category.css' | relative_url }}">
-{% elsif page.layout == 'archive' %}
+{% elsif page.url contains '/posts' or page.url == '/posts/' %}
   <link rel="stylesheet" href="{{ '/assets/css/archive.css' | relative_url }}">
 {% else %}
   <!-- Default to home page styles -->
@@ -29,8 +29,6 @@
 <!-- Responsive CSS - Always load last -->
 <link rel="stylesheet" href="{{ '/assets/css/responsive.css' | relative_url }}">
 
-<!-- Canonical URL -->
+<!-- SEO & RSS -->
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-
-<!-- RSS Feed -->
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
