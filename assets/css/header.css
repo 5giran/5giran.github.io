@@ -137,14 +137,16 @@
 
 .profile-section h3 {
   margin: 0 0 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  color: #fff;
 }
 
 .profile-section p {
   margin: 0 0 1rem;
-  opacity: 0.9;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .social-links {
@@ -174,15 +176,17 @@
 /* Menu Section */
 .menu-section {
   padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .menu-section h4 {
   margin: 0 0 1rem;
   font-size: 1.1rem;
   font-weight: 600;
-  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .menu-list {
@@ -203,6 +207,7 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   font-size: 1rem;
+  cursor: pointer; /* 🔧 [개선] 커서 변경 */
 }
 
 .menu-list a:hover {
@@ -210,7 +215,15 @@
   transform: translateX(5px);
 }
 
-/* Calendar Widget - Modern iOS Style */
+/* 현재 활성화된 메뉴 항목 강조 */
+.menu-list a.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  border-left: 4px solid var(--white);
+  padding-left: 0.75rem;
+}
+
+/* Calendar Widget */
 .status-section {
   padding: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -220,9 +233,10 @@
   margin: 0 0 1rem;
   font-size: 0.9rem;
   font-weight: 600;
-  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .calendar-widget {
