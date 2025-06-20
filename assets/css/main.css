@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Main CSS File - Import All Modules
+   ========================================================================== */
+
+/* Import all CSS modules in dependency order */
+@import url('base.css');           /* Foundation styles, fonts, variables */
+@import url('components.css');     /* Reusable components (buttons, tags, cards) */
+@import url('layout.css');         /* Layout structure and containers */
+@import url('header.css');         /* Header, navigation, side menu */
+@import url('home.css');           /* Homepage specific styles */
+@import url('category.css');       /* Category pages */
+@import url('archive.css');        /* Archive pages */
+@import url('post.css');           /* Post pages (your existing file) */
+@import url('responsive.css');     /* Mobile and tablet breakpoints */
+
+/* 
+Alternative approach for performance optimization:
+You can also conditionally load CSS files based on page type:
+
+Homepage:
+- base.css + components.css + layout.css + header.css + home.css + responsive.css
+
+Category page:
+- base.css + components.css + layout.css + header.css + category.css + responsive.css
+
+Post page:
+- base.css + components.css + layout.css + header.css + post.css + responsive.css
+
+Archive page:
+- base.css + components.css + layout.css + header.css + archive.css + responsive.css
+*/
